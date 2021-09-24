@@ -1,0 +1,150 @@
+.header {
+  @include mont-semi-bold;
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  grid-template-rows: 100% 20%;
+  align-items: center;
+  color: $white;
+  font-size: 20px;
+
+  &__burger {
+    display: none;
+
+    &-list {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 4%;
+
+    :hover {
+      transition: 0.5s ease;
+      color: $orange;
+    }
+  }
+
+  &__lang {
+    justify-self: flex-end;
+
+    &:hover {
+      transition: 0.5s ease;
+      color: $orange;
+    }
+  }
+
+  &__links {
+    @include mont-light;
+    font-size: 14px;
+
+    &-blog {
+      padding: 2px 10px;
+      color: #6e105e;
+      background-color: $grey;
+      border-radius: 20px;
+
+      &:hover {
+        transition: 0.5s ease;
+        color: $white;
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &__list {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__list {
+      font-size: 15px;
+    }
+    &__links {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    position: relative;
+    display: none;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 50% 20%;
+    grid-template-columns: 31% 47% 22%;
+    padding-top: 2%;
+
+    &__list {
+      display: none;
+    }
+
+    &__logo {
+      order: 2;
+      height: 140%;
+    }
+
+    &__burger-item {
+      padding: 1%;
+      font-size: 12px;
+    }
+
+    &__burger {
+      order: 1;
+      display: block;
+      justify-self: left;
+
+      &-close {
+        position: absolute;
+        top: 9%;
+        right: 50%;
+      }
+
+      &-list {
+        display: none;
+        z-index: 10;
+        min-width: 100%;
+        min-height: 100vw;
+        top: -17%;
+        left: 0;
+        background-color: #000;
+        position: absolute;
+        margin-top: 4%;
+        padding: 9% 3% 0;
+      }
+
+      &-item {
+        padding: 1%;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+    }
+    &__links {
+      justify-self: left;
+      order: 4;
+      font-size: 8px;
+    }
+
+    &__lang {
+      align-self: flex-end;
+      font-size: 14px;
+      order: 3;
+      justify-self: center;
+    }
+  }
+
+  .active {
+    display: block;
+  }
+}

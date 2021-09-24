@@ -1,0 +1,62 @@
+.blogs {
+
+  &__title {
+    @include mont-extra;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 6%;
+  }
+
+  &__img {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(189, 28, 159, 0.5);
+      opacity: 0.8;
+      transition: linear .4s;
+    }
+  }
+
+  &__card {
+
+    &-info {
+      max-width: 245px;
+      position: absolute;
+      bottom: 0;
+      padding: 2%;
+    }
+  }
+
+}
+
+.blogs__img:hover:after {
+  height: 0;
+  opacity: 0;
+}
+
+@media (max-width: 576px) {
+  .blogs {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__card-title {
+      font-size: 11px;
+    }
+    &__card-digit {
+      display: none;
+    }
+  }
+  .swiper-horizontal>.swiper-scrollbar {
+    bottom: 9px;
+  }
+
+}

@@ -1,0 +1,32 @@
+@mixin mont-bold {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin mont-extra {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin mont-light {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin mont-med {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin mont-semi-bold {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+}
+@mixin roboto {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+}
